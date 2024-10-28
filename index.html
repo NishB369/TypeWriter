@@ -17,36 +17,36 @@
   <h1 class="title">CSS Flexbox Apple Keyboard by <a href="//olex.co/">Olex</a></h1>
   <div class="keyboard">
     <div class="keyboard-row thin">
-      <div class="key lowercase">Esc</div>
-      <div class="key function lo-bright"><span>f1</span></div>
-      <div class="key function hi-bright"><span>f2</span></div>
-      <div class="key function expose"><span>f3</span></div>
-      <div class="key function tilez"><span>f4</span></div>
-      <div class="key function"><span>f5</span></div>
-      <div class="key function"><span>f6</span></div>
-      <div class="key function rewind"><span>f7</span></div>
-      <div class="key function play-pause"><span>f8</span></div>
-      <div class="key function ffwd"><span>f9</span></div>
-      <div class="key function mute"><span>f10</span></div>
-      <div class="key function lo-vol"><span>f11</span></div>
-      <div class="key function hi-vol"><span>f12</span></div>
+      <div class="key lowercase" id="Escape">Esc</div>
+      <div class="key function lo-bright" id="F1"><span>f1</span></div>
+      <div class="key function hi-bright" id="F2"><span>f2</span></div>
+      <div class="key function expose" id="F3"><span>f3</span></div>
+      <div class="key function tilez" id="F4"><span>f4</span></div>
+      <div class="key function" id="F5"><span>f5</span></div>
+      <div class="key function" id="F6"><span>f6</span></div>
+      <div class="key function rewind" id="F7"><span>f7</span></div>
+      <div class="key function play-pause" id="F8"><span>f8</span></div>
+      <div class="key function ffwd" id="F9"><span>f9</span></div>
+      <div class="key function mute" id="F10"><span>f10</span></div>
+      <div class="key function lo-vol" id="F11"><span>f11</span></div>
+      <div class="key function hi-vol" id="F12"><span>f12</span></div>
       <div class="key eject"></div>
     </div>
     <div class="keyboard-row">
-      <div class="key"><span>~<br/>`</span></div>
-      <div class="key"><span>!<br/>1</span></div>
-      <div class="key"><span>@<br/>2</span></div>
-      <div class="key"><span>#<br/>3</span></div>
-      <div class="key"><span>$<br/>4</span></div>
-      <div class="key"><span>%<br/>5</span></div>
-      <div class="key"><span>^<br/>6</span></div>
-      <div class="key"><span>&amp;<br/>7</span></div>
-      <div class="key"><span>*<br/>8</span></div>
-      <div class="key"><span>(<br/>9</span></div>
-      <div class="key"><span>)<br/>0</span></div>
-      <div class="key"><span>_<br/>-</span></div>
-      <div class="key"><span>+<br/>=</span></div>
-      <div class="key extra-size lowercase lower-right"><span class="lower-row-text">delete</span></div>
+      <div class="key" id="~"><span>~<br/>`</span></div>
+      <div class="key" id="1"><span>!<br/>1</span></div>
+      <div class="key" id="2"><span>@<br/>2</span></div>
+      <div class="key" id="3"><span>#<br/>3</span></div>
+      <div class="key" id="4"><span>$<br/>4</span></div>
+      <div class="key" id="5"><span>%<br/>5</span></div>
+      <div class="key" id="6"><span>^<br/>6</span></div>
+      <div class="key" id="7"><span>&amp;<br/>7</span></div>
+      <div class="key" id="8"><span>*<br/>8</span></div>
+      <div class="key" id="9"><span>(<br/>9</span></div>
+      <div class="key" id="0"><span>)<br/>0</span></div>
+      <div class="key" id="-"><span>_<br/>-</span></div>
+      <div class="key" id="="><span>+<br/>=</span></div>
+      <div class="key extra-size lowercase lower-right"><span class="lower-row-text" id="Backspace">delete</span></div>
     </div>
     <div class="keyboard-row">
       <div class="key extra-size lowercase lower-left"><span class="lower-row-text">tab</span></div>
@@ -60,9 +60,9 @@
       <div class="key" id="i">I</div>
       <div class="key" id="o">O</div>
       <div class="key" id="p">P</div>
-      <div class="key"><span>{<br/>[</span></div>
-      <div class="key"><span>}<br/>]</span></div>
-      <div class="key"><span>|<br/>\</span></div>
+      <div class="key" id="["><span>{<br/>[</span></div>
+      <div class="key" id="]"><span>}<br/>]</span></div>
+      <div class="key" id="\"><span>|<br/>\</span></div>
     </div>
     <div class="keyboard-row">
       <div class="key lowercase lower-left extra-size-two"><span class="lower-row-text">caps lock</span><span class="absolute-left caps-dot">&bull;</span></div>
@@ -75,12 +75,12 @@
       <div class="key" id="j">J</div>
       <div class="key" id="k">K</div>
       <div class="key" id="l">L</div>
-      <div class="key"><span>:<br/>;</span></div>
-      <div class="key"><span>"<br/>'</span></div>
-      <div class="key extra-size-two lowercase lower-right"><span class="lower-row-text">return</span><span class="absolute-right">enter</span></div>
+      <div class="key" id=";"><span>:<br/>;</span></div>
+      <div class="key" id="'"><span>"<br/>'</span></div>
+      <div class="key extra-size-two lowercase lower-right"><span class="lower-row-text" id="Enter">return</span><span class="absolute-right">enter</span></div>
     </div>
     <div class="keyboard-row">
-      <div class="key double-size lowercase lower-left"><span class="lower-row-text">shift</span></div>
+      <div class="key double-size lowercase lower-left" id="Shift"><span class="lower-row-text">shift</span></div>
       <div class="key" id="z">Z</div>
       <div class="key" id="x">X</div>
       <div class="key" id="c">C</div>
@@ -88,26 +88,26 @@
       <div class="key" id="b">B</div>
       <div class="key" id="n">N</div>
       <div class="key" id="m">M</div>
-      <div class="key"><span>&lt;<br/>,</span></div>
-      <div class="key"><span>&gt;<br/>.</span></div>
-      <div class="key"><span>?<br/>/</span></div>
-      <div class="key double-size lowercase lower-right"><span class="lower-row-text">shift</span></div>
+      <div class="key" id=","><span>&lt;<br/>,</span></div>
+      <div class="key" id="."><span>&gt;<br/>.</span></div>
+      <div class="key" id="/"><span>?<br/>/</span></div>
+      <div class="key double-size lowercase lower-right" id="Shift"><span class="lower-row-text">shift</span></div>
     </div>
     <div class="keyboard-row bottom-row">
       <div class="key lower-left lowercase"><span class="lower-row-text">fn</span></div>
-      <div class="key lower-left lowercase"><span class="lower-row-text">control</span></div>
-      <div class="key lower-left lowercase"><span class="lower-row-text">option</span><span class="absolute-left">alt</span></div>
+      <div class="key lower-left lowercase"><span class="lower-row-text" id="Control">control</span></div>
+      <div class="key lower-left lowercase"><span class="lower-row-text" id="Alt">option</span><span class="absolute-left">alt</span></div>
       <div class="key lower-center lowercase extra-size-two"><span class="lower-row-text">command</span><span class="absolute-right icon">&#8984;</span></div>
       <div class="key space-bar" id="space"></div>
       <div class="key lower-center lowercase extra-size-two"><span class="lower-row-text">command</span><span class="absolute-left icon">&#8984;</span></div>
-      <div class="key lower-right lowercase"><span class="lower-row-text">option</span><span class="absolute-right">alt</span></div>
+      <div class="key lower-right lowercase"><span class="lower-row-text" id="Alt">option</span><span class="absolute-right">alt</span></div>
       <div class="arrows">
-          <div class="key">&#9668;</div>
+          <div class="key" id="ArrowLeft">&#9668;</div>
           <div class="up-down">
-            <div class="key">&#9650;</div>
-            <div class="key">&#9660;</div>
+            <div class="key" id="ArrowUp">&#9650;</div>
+            <div class="key" id="ArrowDown">&#9660;</div>
           </div>
-          <div class="key">&#9658;</div>
+          <div class="key" id="ArrowRight">&#9658;</div>
         </div>
       </div>
     </div>
