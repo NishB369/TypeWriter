@@ -32,9 +32,13 @@ let parameter_value02 = document.querySelector("#parameter_value02");
 let parameter_value03 = document.querySelector("#parameter_value03");
 
 keyList = document.querySelectorAll(".key");
+var settings = document.querySelector("#settings");
 
 var start = document.querySelector(".start");
 start.addEventListener("click", function () {
+  a=-1
+  settings.style.cursor="not-allowed"
+  settings.style.pointerEvents = "none"
   soundList[1].play();
   soundList[1].playbackRate = 2;
   start.innerHTML = "<div>Start<div>";
@@ -72,7 +76,6 @@ start.addEventListener("click", function () {
 
     textInput.addEventListener("keydown", function () {
       soundList[0].play();
-      soundList[0].playbackRate = 2;
       event.key == " "
         ? (keypressedid = "#space")
         : (keypressedid = "#" + String(event.key));
@@ -105,7 +108,6 @@ start.addEventListener("click", function () {
           n / ((timeend - timestart) / 1000 / 60)
         )}wpm</div>`;
         textInput.disabled = true;
-        lvl_complete.play();
       }
     });
 
@@ -127,11 +129,15 @@ cross_btn.addEventListener("click", function () {
   result.style.display = "none";
   start.innerHTML =
     '<div class="bi bi-arrow-counterclockwise"></div><div>Re-Start<div>';
+  settings.style.pointerEvents = "auto"
+  settings.style.cursor="pointer"
 });
 
-var settings = document.querySelector("#settings");
+
 var settings_panel = document.querySelector(".settings_panel");
 settings.addEventListener("click", function () {
+  soundList[3].play();
+  soundList[3].playbackRate=2
   settings_panel.style.display = "flex";
 });
 
@@ -141,3 +147,27 @@ settings_cross_btn.addEventListener("click", function () {
   soundList[3].playbackRate=2
   settings_panel.style.display = "none";
 });
+
+soundList[0].playbackRate=2
+let themeList = document.querySelectorAll(".theme_val")
+themeList.forEach(function(theme_val,i){
+  theme_val.addEventListener("click",function(){
+    switch (i) {
+      case 0:
+        soundList[0].src="/Game/game_key_sound.mp3"
+        soundList[0].playbackRate=4
+        soundList[1].src="/Game/game_start_sound.mp3"
+        soundList[2].src="/Game/game_complete_sound.mp3"
+        break;
+      
+      case 1:
+        soundList[0].src="/Game/game_key_sound.mp3"
+        soundList[1].src="/Game/game_start_sound.mp3"
+        soundList[2].src="/Game/game_complete_sound.mp3"
+        break;
+
+      default:
+        break;
+    }
+  })
+})

@@ -4,7 +4,7 @@
 body {
   box-sizing: border-box;
   background-color: #080808;
-  font-family: 'VAG Rounded W01 Thin';
+  font-family: "VAG Rounded W01 Thin";
   display: flex;
   align-items: center;
   justify-content: center;
@@ -16,7 +16,7 @@ body {
   background-size: contain;
 }
 
-audio{
+audio {
   display: none;
 }
 
@@ -39,7 +39,7 @@ audio{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   font-weight: bold;
 }
 
@@ -65,11 +65,11 @@ audio{
   color: white;
 }
 
-#settings{
+#settings {
   cursor: pointer;
 }
 
-.start{
+.start {
   background-color: blue;
   padding: 2% 6%;
   border-radius: 30px;
@@ -80,12 +80,11 @@ audio{
   cursor: pointer;
 }
 
-.start div{
+.start div {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
 
 .container {
   width: 70%;
@@ -129,7 +128,8 @@ h1 a:hover {
   color: #3a3a3a;
   background-color: #f7f7f7;
   flex: 1;
-  box-shadow: inset 0 -2px 0 #aaaaaa, inset 0px 1px 1px -1px #fff, 0px 1px 1px 0px #7a7a7a;
+  box-shadow: inset 0 -2px 0 #aaaaaa, inset 0px 1px 1px -1px #fff,
+    0px 1px 1px 0px #7a7a7a;
   border-radius: 3px;
   text-transform: uppercase;
   font-size: 14px;
@@ -137,7 +137,8 @@ h1 a:hover {
   white-space: nowrap;
   overflow: hidden;
   user-select: none;
-  transition: transform 0.08s ease, background-color 0.08s ease, box-shadow 0.08s ease;
+  transition: transform 0.08s ease, background-color 0.08s ease,
+    box-shadow 0.08s ease;
   cursor: pointer;
 }
 .key:hover {
@@ -145,7 +146,8 @@ h1 a:hover {
 }
 .key:active {
   transform: translateY(1.5px);
-  box-shadow: inset 0 -0.5px 0 #aaaaaa, inset 0px -1px 1px -1px #fff, 0px 0.5px 0.75px 0px #999;
+  box-shadow: inset 0 -0.5px 0 #aaaaaa, inset 0px -1px 1px -1px #fff,
+    0px 0.5px 0.75px 0px #999;
 }
 .key span {
   display: inline-block;
@@ -155,7 +157,7 @@ h1 a:hover {
   display: inline-block;
   vertical-align: middle;
   height: 100%;
-  content: '';
+  content: "";
 }
 .keyboard-row.thin .key {
   height: 20px;
@@ -253,7 +255,8 @@ h1 a:hover {
   margin: 0;
 }
 .bottom-row .arrows .up-down .key:first-child {
-  box-shadow: inset 0 -5px 4px -4px #aaaaaa, inset 0px 1px 1px -1px #fff, 0px 1px 1px 0px #7a7a7a;
+  box-shadow: inset 0 -5px 4px -4px #aaaaaa, inset 0px 1px 1px -1px #fff,
+    0px 1px 1px 0px #7a7a7a;
   border-bottom-left-radius: 1px;
   border-bottom-right-radius: 1px;
 }
@@ -328,7 +331,7 @@ h1 a:hover {
   background-image: url(//s3-us-west-2.amazonaws.com/s.cdpn.io/8533/apple-icons-01_1.svg);
 }
 
-.text_ctr{
+.text_ctr {
   height: 40%;
   width: 60%;
   /* background-color: crimson; */
@@ -338,7 +341,7 @@ h1 a:hover {
   margin-top: -75px;
 }
 
-textarea{
+textarea {
   width: 100%;
   border-radius: 50px;
   display: flex;
@@ -353,7 +356,7 @@ textarea{
   border-radius: 5px;
 }
 
-.text_area{
+.text_area {
   height: 80px;
   width: 70%;
   display: flex;
@@ -365,14 +368,14 @@ textarea{
   color: white;
   font-size: 16px;
   font-weight: 500;
-  flex-wrap:wrap;
+  flex-wrap: wrap;
   padding: 0 10%;
   /* margin-bottom: 10px; */
   margin-top: 20px;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
 }
 
-.result{
+.result {
   height: 100%;
   width: 100%;
   position: absolute;
@@ -384,7 +387,7 @@ textarea{
   display: none;
 }
 
-.sub_result{
+.sub_result {
   height: 100%;
   width: 100%;
   position: relative;
@@ -395,7 +398,7 @@ textarea{
   justify-content: center;
 }
 
-.cross{
+.cross {
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -405,7 +408,7 @@ textarea{
   top: 10%;
 }
 
-.dashboard{
+.dashboard {
   width: 80%;
   height: 50%;
   /* border: 1px solid red; */
@@ -415,12 +418,12 @@ textarea{
   align-items: center;
   justify-content: center;
   gap: 3%;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   color: white;
   font-weight: bolder;
 }
 
-.card{
+.card {
   height: 100%;
   width: 27.5%;
   backdrop-filter: blur(200px);
@@ -435,25 +438,25 @@ textarea{
   flex-direction: column;
 }
 
-.parameter_value{
+.parameter_value {
   font-size: 75px;
   font-weight: bolder;
   margin-bottom: 1%;
 }
 
-.parameter{
+.parameter {
   font-size: 25px;
   font-weight: bolder;
   background-color: black;
   padding: 2% 3%;
 }
 
-.settings_panel{
+.settings_panel {
   height: 100%;
   width: 25%;
   position: absolute;
   right: 0;
-  top:0;
+  top: 0;
   background-color: transparent;
   z-index: 1;
   backdrop-filter: blur(10px);
@@ -462,7 +465,7 @@ textarea{
   display: none;
 }
 
-.sub_settings_panel{
+.sub_settings_panel {
   height: 100%;
   width: 100%;
   position: relative;
@@ -470,4 +473,25 @@ textarea{
   justify-content: center;
   display: flex;
   flex-direction: column;
+}
+
+.theme_val {
+  margin-left: 4%;
+  margin-bottom: 5%;
+  background-color: blue;
+  width: fit-content;
+  padding: 2% 3%;
+  border-radius: 3px;
+  font-size: 22px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme_val span {
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
