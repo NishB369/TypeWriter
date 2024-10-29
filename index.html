@@ -15,6 +15,25 @@
 
 <!-- partial:index.partial.html -->
 
+<audio src="/Retro/retro_key_sound.mp3" id="key_sound"></audio>
+<audio src="/Retro/retro_start_sound.mp3" id="start_sound"></audio>
+<audio src="/Retro/retro_complete_sound.mp3" id="complete_sound"></audio>
+<audio src="/Retro/retro_click_sound.mp3"></audio>
+
+<div class="settings_panel">
+  <div class="sub_settings_panel">
+    <div class="bi bi-x-circle-fill settings_cross_btn" style="color: blue; scale: 2; background-color: white; border-radius: 100%; display: flex; align-items: center; justify-content: center; cursor: pointer; position: absolute; top: 15%; right: 15%;"></div>
+    </div>
+    <div style="height:70%; width: 80%; position: absolute; top: 30%; color: white; font-size: 20px; font-family: 'Courier New', Courier, monospace; font-weight: bold; display: flex; align-items: flex-start; justify-content: flex-start; flex-direction: column;">
+      <div style="font-size: 28px; margin-bottom: 4%;">Themes</div>
+      <div style="margin-left: 4%; margin-bottom: 5%; background-color: blue; width: fit-content; padding: 2% 3%; border-radius: 3px; font-size: 22px; cursor: pointer; display: flex; align-items: center; justify-content: center;"><span class="bi bi-controller" style="margin-right: 10px; display: flex; align-items: center; justify-content: center;"></span>Game</div>
+      <div style="margin-left: 4%; margin-bottom: 5%; background-color: blue; width: fit-content; padding: 2% 3%; border-radius: 3px; font-size: 22px; cursor: pointer; display: flex; align-items: center; justify-content: center;"><span class="bi bi-chevron-up" style="margin-right: 10px; display: flex; align-items: center; justify-content: center;"></span>Futuristic</div>
+      <div style="margin-left: 4%; margin-bottom: 5%; background-color: blue; width: fit-content; padding: 2% 3%; border-radius: 3px; font-size: 22px; cursor: pointer; display: flex; align-items: center; justify-content: center;"><span class="bi bi-printer-fill" style="margin-right: 10px; display: flex; align-items: center; justify-content: center;"></span>Retro</div>
+      </ul>
+    </div>
+  </div>
+</div>
+
 <div class="main">
   <div class="header">
     <div class="slider">
@@ -22,7 +41,7 @@
       <input type="range" name="" id="diff_slider" min="5" max="12" value="8"/>
     </div>
     <div class="btn_ctr">
-      <div class="bi bi-gear-fill"></div>
+      <div class="bi bi-gear-fill" id="settings"></div>
       <div class="start">Start</div>
     </div>
   </div>

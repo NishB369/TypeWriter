@@ -23,6 +23,7 @@ var timestart;
 var timeend;
 
 // sounds access
+soundList = document.querySelectorAll("audio");
 
 // on completion page
 let result = document.querySelector(".result");
@@ -34,6 +35,8 @@ keyList = document.querySelectorAll(".key");
 
 var start = document.querySelector(".start");
 start.addEventListener("click", function () {
+  soundList[1].play();
+  soundList[1].playbackRate = 2;
   start.innerHTML = "<div>Start<div>";
   keyList.forEach((element) => {
     element.style.transform = "translateY(0px)";
@@ -68,6 +71,8 @@ start.addEventListener("click", function () {
     timestart = Date.now();
 
     textInput.addEventListener("keydown", function () {
+      soundList[0].play();
+      soundList[0].playbackRate = 2;
       event.key == " "
         ? (keypressedid = "#space")
         : (keypressedid = "#" + String(event.key));
@@ -86,6 +91,8 @@ start.addEventListener("click", function () {
 
       len++;
       if (len == wordsArray.length) {
+        soundList[2].play();
+        soundList[2].playbackRate = 2;
         parameter_value01.innerHTML += `<div>${Math.round(
           (corr / (corr + wrong)) * 100
         )}%</div>`;
@@ -115,7 +122,22 @@ start.addEventListener("click", function () {
 
 let cross_btn = document.querySelector(".cross_btn");
 cross_btn.addEventListener("click", function () {
+  soundList[3].play();
+  soundList[3].playbackRate=2
   result.style.display = "none";
   start.innerHTML =
     '<div class="bi bi-arrow-counterclockwise"></div><div>Re-Start<div>';
+});
+
+var settings = document.querySelector("#settings");
+var settings_panel = document.querySelector(".settings_panel");
+settings.addEventListener("click", function () {
+  settings_panel.style.display = "flex";
+});
+
+var settings_cross_btn = document.querySelector(".settings_cross_btn");
+settings_cross_btn.addEventListener("click", function () {
+  soundList[3].play();
+  soundList[3].playbackRate=2
+  settings_panel.style.display = "none";
 });
