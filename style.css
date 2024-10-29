@@ -3,7 +3,7 @@
 }
 body {
   box-sizing: border-box;
-  background-color: #404049;
+  background-color: #080808;
   font-family: 'VAG Rounded W01 Thin';
   display: flex;
   align-items: center;
@@ -11,14 +11,87 @@ body {
   flex-direction: column;
   height: 100%;
   width: 100%;
+  background-image: url(./gridbg.png);
+  background-position: center;
+  background-size: contain;
 }
-.container {
+
+.main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  /* border: 1px solid pink; */
+  gap: 3%;
+  padding-top: 5%;
+}
+
+.header {
+  height: 7.5%;
   width: 80%;
-  padding: 30px 8px 8px;
+  /* border: 1px solid red; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+}
+
+.slider {
+  height: 100%;
+  width: 40%;
+  /* border: 1px solid white; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5%;
+  color: white;
+}
+
+.btn_ctr {
+  height: 100%;
+  width: 30%;
+  /* border: 1px solid yellow; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10%;
+  color: white;
+}
+
+.btn_ctr div{
+  cursor: pointer;
+}
+
+.start{
+  background-color: blue;
+  padding: 2% 6%;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.start div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.container {
+  width: 70%;
+  padding: 8px 8px;
   margin: 60px auto;
-  box-shadow: inset 1px 1px 0px #f1f1f1, 3px 3px 6px 3px #303038;
+  box-shadow: inset 1px 1px 10px #f1f1f1, 3px 3px 6px 3px #303038;
   background-color: #e3e3e3;
   border-radius: 1px 1px 7px 7px;
+  scale: 0.75;
+  /* border: 1px solid red; */
+  margin-top: -1%;
 }
 h1 {
   position: relative;
@@ -252,11 +325,12 @@ h1 a:hover {
 
 .text_ctr{
   height: 40%;
-  width: 50%;
+  width: 60%;
   /* background-color: crimson; */
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: -6%;
 }
 
 textarea{
@@ -267,11 +341,16 @@ textarea{
   justify-content: center;
   text-align: center;
   padding: 1%;
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
 }
 
 .text_area{
-  height: 60px;
-  width: 80%;
+  height: 80px;
+  width: 70%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -279,10 +358,87 @@ textarea{
   border: 1px solid white;
   border-radius: 5px;
   color: white;
-  font-size: 18px;
-  font-weight: 700;
-  flex-wrap: wrap;
+  font-size: 16px;
+  font-weight: 500;
+  flex-wrap:wrap;
   padding: 0 10%;
-  margin-bottom: 10px;
-  margin-top: -40px;
+  /* margin-bottom: 10px; */
+  margin-top: 20px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.result{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: transparent;
+  top: 0;
+  backdrop-filter: blur(10px);
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+
+.sub_result{
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background-color: transparent;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cross{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 80%;
+  /* border: 1px solid red; */
+  position: absolute;
+  top: 10%;
+}
+
+.dashboard{
+  width: 80%;
+  height: 50%;
+  /* border: 1px solid red; */
+  position: absolute;
+  top: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3%;
+  font-family: 'Courier New', Courier, monospace;
+  color: white;
+  font-weight: bolder;
+}
+
+.card{
+  height: 100%;
+  width: 27.5%;
+  backdrop-filter: blur(200px);
+  border: 3px solid white;
+  background-color: blue;
+  opacity: 0.75;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.parameter_value{
+  font-size: 75px;
+  font-weight: bolder;
+  margin-bottom: 1%;
+}
+
+.parameter{
+  font-size: 25px;
+  font-weight: bolder;
+  background-color: black;
+  padding: 2% 3%;
 }
