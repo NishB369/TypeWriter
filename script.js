@@ -36,9 +36,9 @@ var settings = document.querySelector("#settings");
 
 var start = document.querySelector(".start");
 start.addEventListener("click", function () {
-  a=-1
-  settings.style.cursor="not-allowed"
-  settings.style.pointerEvents = "none"
+  a = -1;
+  settings.style.cursor = "not-allowed";
+  settings.style.pointerEvents = "none";
   soundList[1].play();
   soundList[1].playbackRate = 2;
   start.innerHTML = "<div>Start<div>";
@@ -47,12 +47,16 @@ start.addEventListener("click", function () {
     element.style.backgroundColor = "#f7f7f7";
   });
 
-  // generating n random words
-  let wordsArray = "";
-  for (let i = 0; i < n; i++) {
+  // Generating n unique random words
+  let wordsArray = new Set();
+
+  while (wordsArray.size < n) {
     let randomIndex = Math.floor(Math.random() * 100);
-    wordsArray += words.split(" ")[randomIndex] + " ";
+    wordsArray.add(words.split(" ")[randomIndex]);
   }
+
+  // Convert the Set to a string with a space between each word
+  wordsArray = Array.from(wordsArray).join(" ");
 
   // putting the words to display
   var disp_area = document.querySelector(".text_area");
@@ -125,62 +129,63 @@ start.addEventListener("click", function () {
 let cross_btn = document.querySelector(".cross_btn");
 cross_btn.addEventListener("click", function () {
   soundList[3].play();
-  soundList[3].playbackRate=2
+  soundList[3].playbackRate = 2;
   result.style.display = "none";
   start.innerHTML =
     '<div class="bi bi-arrow-counterclockwise"></div><div>Re-Start<div>';
-  settings.style.pointerEvents = "auto"
-  settings.style.cursor="pointer"
+  settings.style.pointerEvents = "auto";
+  settings.style.cursor = "pointer";
 });
-
 
 var settings_panel = document.querySelector(".settings_panel");
 settings.addEventListener("click", function () {
   soundList[3].play();
-  soundList[3].playbackRate=2
+  soundList[3].playbackRate = 2;
   settings_panel.style.display = "flex";
 });
 
 var settings_cross_btn = document.querySelector(".settings_cross_btn");
 settings_cross_btn.addEventListener("click", function () {
   soundList[3].play();
-  soundList[3].playbackRate=2
+  soundList[3].playbackRate = 2;
   settings_panel.style.display = "none";
 });
 
-soundList[0].playbackRate=2
-let themeList = document.querySelectorAll(".theme_val")
-themeList.forEach(function(theme_val,i){
-  theme_val.addEventListener("click",function(){
-    soundList[3].play()
-    gsap.fromTo(theme_val,{
-      scale:0.9,
-      duration:0.4,
-      ease: "bounce.out",
-    },{
-      scale:1,
-      duration:0.4,
-      ease: "bounce.out",
-    })
-
+soundList[0].playbackRate = 2;
+let themeList = document.querySelectorAll(".theme_val");
+themeList.forEach(function (theme_val, i) {
+  theme_val.addEventListener("click", function () {
+    soundList[3].play();
+    gsap.fromTo(
+      theme_val,
+      {
+        scale: 0.9,
+        duration: 0.4,
+        ease: "bounce.out",
+      },
+      {
+        scale: 1,
+        duration: 0.4,
+        ease: "bounce.out",
+      }
+    );
 
     switch (i) {
       case 0:
-        soundList[0].src="/Game/game_key_sound.mp3"
-        soundList[0].playbackRate=4
-        soundList[1].src="/Game/game_start_sound.mp3"
-        soundList[2].src="/Game/game_complete_sound.mp3"
+        soundList[0].src = "/Game/game_key_sound.mp3";
+        soundList[0].playbackRate = 4;
+        soundList[1].src = "/Game/game_start_sound.mp3";
+        soundList[2].src = "/Game/game_complete_sound.mp3";
         break;
-      
+
       case 1:
-        soundList[0].src="/Game/game_key_sound.mp3"
-        soundList[1].src="/Game/game_start_sound.mp3"
-        soundList[2].src="/Game/game_complete_sound.mp3"
+        soundList[0].src = "/Game/game_key_sound.mp3";
+        soundList[1].src = "/Game/game_start_sound.mp3";
+        soundList[2].src = "/Game/game_complete_sound.mp3";
         break;
 
       default:
         break;
     }
-  })
-})
-
+  });
+});
