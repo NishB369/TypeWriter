@@ -152,6 +152,18 @@ soundList[0].playbackRate=2
 let themeList = document.querySelectorAll(".theme_val")
 themeList.forEach(function(theme_val,i){
   theme_val.addEventListener("click",function(){
+    soundList[3].play()
+    gsap.fromTo(theme_val,{
+      scale:0.9,
+      duration:0.4,
+      ease: "bounce.out",
+    },{
+      scale:1,
+      duration:0.4,
+      ease: "bounce.out",
+    })
+
+
     switch (i) {
       case 0:
         soundList[0].src="/Game/game_key_sound.mp3"
@@ -171,3 +183,4 @@ themeList.forEach(function(theme_val,i){
     }
   })
 })
+
