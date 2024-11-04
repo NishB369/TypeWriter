@@ -55,10 +55,8 @@ start.addEventListener("click", function () {
     wordsArray.add(words.split(" ")[randomIndex]);
   }
 
-  // Convert the Set to a string with a space between each word
   wordsArray = Array.from(wordsArray).join(" ");
 
-  // putting the words to display
   var disp_area = document.querySelector(".text_area");
 
   disp_area.innerHTML = "";
@@ -128,11 +126,12 @@ start.addEventListener("click", function () {
 
 let cross_btn = document.querySelector(".cross_btn");
 cross_btn.addEventListener("click", function () {
+  window.location.reload();
   soundList[3].play();
   soundList[3].playbackRate = 2;
   result.style.display = "none";
-  start.innerHTML =
-    '<div class="bi bi-arrow-counterclockwise"></div><div>Re-Start<div>';
+  // start.innerHTML =
+  //   '<div class="bi bi-arrow-counterclockwise"></div><div>Re-Start<div>';
   settings.style.pointerEvents = "auto";
   settings.style.cursor = "pointer";
 });
